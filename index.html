@@ -1,0 +1,47 @@
+<div class="container">
+  <header>
+    <link rel="stylesheet" href="style.css">
+    <h1>Expense Tracker</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <form id="expense-form">
+    <input type="date" id="date" required />
+    <input type="number" id="amount" placeholder="Amount" required />
+    <select id="category">
+      <option value="Food">Food</option>
+      <option value="Travel">Travel</option>
+      <option value="Bills">Bills</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="text" id="description" placeholder="Description" />
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <div id="filters">
+    <select id="filter-category">
+      <option value="All">All Categories</option>
+      <option value="Food">Food</option>
+      <option value="Travel">Travel</option>
+      <option value="Bills">Bills</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <section id="summary">
+    <div>Total This Month: ₹<span id="monthly-total">0</span></div>
+    <div>Total This Year: ₹<span id="yearly-total">0</span></div>
+  </section>
+
+  <section>
+    <table id="expense-table">
+      <thead>
+        <tr>
+          <th>Date</th><th>Amount</th><th>Category</th><th>Description</th><th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</div>
+<script src="script.js"></script>
